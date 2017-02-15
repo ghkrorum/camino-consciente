@@ -120,6 +120,9 @@
                             <?php endif; ?>
                             
                         </div>
+                        <div class="partial-section">
+                            <?php get_template_part( 'template-parts/share' ); ?>
+                        </div>
                     </div>
                     <?php if ( $course_data['benefits'] ) : ?>
                     <ul class="course-targets">

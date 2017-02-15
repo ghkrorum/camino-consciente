@@ -8508,6 +8508,12 @@ input.submit-selectable[type="submit"] {
   z-index: 9;
   margin: 0 auto;
   position: absolute; }
+#curso-section .banner-top .partial-section{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+}
 #curso-section .wrapper-nota-blog p.precio{
   font-size: 16px;
 }
@@ -9717,7 +9723,7 @@ body {
 }
 .course-targets li p.txt{
   font-size: 16px;
-  font-family: "Lato-Black";
+  font-family: "Lato";
   line-height: 18px;
   padding: 8px;
   height: 60px;

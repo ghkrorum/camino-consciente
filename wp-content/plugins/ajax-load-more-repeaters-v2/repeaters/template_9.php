@@ -8,7 +8,7 @@ $thumb_url =  get_the_post_thumbnail_url( $post->ID,  'featured-courses' );
 $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
 ?>
 <!-- init article -->
-<article class="article">
+<article class="article article-venue">
     <div class="row">
         <div class="col-md-5 search-results-mobile-image">
             <a href="<?php the_permalink(); ?>">
@@ -127,7 +127,7 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                         </div>
                         <?php if( have_rows('testimonials') ) : ?>
                         <a class="the-rating-lbl" href="<?php the_permalink(); ?>#testimoniales">
-                            Experiencias alumnos
+                            Experiencias de alumnos
                         </a>
                         <?php endif; ?>
                     </div>

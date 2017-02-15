@@ -127,7 +127,7 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                         </div>
                         <?php if( have_rows('testimonials') ) : ?>
                         <a class="the-rating-lbl" href="<?php the_permalink(); ?>#testimoniales">
-                            Experiencias alumnos
+                            Experiencias de alumnos
                         </a>
                         <?php endif; ?>
                     </div>
