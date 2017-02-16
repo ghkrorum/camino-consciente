@@ -206,23 +206,23 @@
                                             if ($videoUrl && $videoImg):
                                                 $thumb = kxn_get_acf_image_src($videoImg, 'video-thumb-560x360');
                                             ?>
+                                            <a href="<?= $videoUrl; ?>" data-lity>
                                             <div class="video-testimonial button-video" >
                                                 <div class="row">
                                                     <div class="col-md-12 col-md-offset-0 col-xs-12">
-                                                        <a href="<?= $videoUrl; ?>" data-lity>
-                                                            <img src="<?= $thumb; ?>" >
-                                                            <div class="btn-vid-cont text-center">
-                                                                <div class="icon-video btn-video">
-                                                                    <span class="icon-cont">
-                                                                    <i class="icon icon-play"></i>
-                                                                    </span>
-                                                                    <span class="title-video">Ver video</span>
-                                                                </div>
-                                                            </div>
-                                                        </a>
+                                                        <img src="<?= $thumb; ?>" >
+                                                    </div>
+                                                </div>
+                                                <div class="btn-vid-cont text-center">
+                                                    <div class="icon-video btn-video">
+                                                        <span class="icon-cont">
+                                                        <i class="icon icon-play"></i>
+                                                        </span>
+                                                        <span class="title-video">Ver video</span>
                                                     </div>
                                                 </div>
                                             </div>
+                                            </a>
                                             <?php 
                                             endif;
                                             ?>

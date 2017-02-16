@@ -8666,10 +8666,15 @@ input.submit-selectable[type="submit"] {
       font-family: "Lato"; }
   #curso-section .tab-wrapper .imagen-description, #interior-curso-section .tab-wrapper .imagen-description {
     position: relative;
-    padding-left: 25px; }
+    padding-left: 25px; 
+    height: 100%;
+  }
+  #curso-section .tab-wrapper .imagen-description .video-testimonial{
+    height: 100%;
+  }
     #curso-section .tab-wrapper .imagen-description .wrapper-border, #interior-curso-section .tab-wrapper .imagen-description .wrapper-border {
       width: 100%;
-      height: 400px; }
+      height: 100%; }
       #curso-section .tab-wrapper .imagen-description .wrapper-border .btn, #interior-curso-section .tab-wrapper .imagen-description .wrapper-border .btn {
         margin-top: 5px;
         margin-bottom: 5px;
@@ -8892,6 +8897,9 @@ input.submit-selectable[type="submit"] {
     top: 50%;
     left: 50%;
     margin: -40px 0 0 -40px;
+  }
+  .video-testimonial.button-video .btn-vid-cont{
+    bottom: 20px;
   }
   .button-video .icon-video{
       position: relative;
@@ -9928,9 +9936,10 @@ h3.lecturer-position{
 }
 .the-bullet.website p{
   font-family: "Lato";
-  padding: 3px 3px 0 0;
+  padding: 3px 10px 0 0;
   overflow: hidden;
   font-size: 10px;
+  display: inline-block;
 }
 .filtro-centro .btn-vid-cont .title-video{
   font-family: "Lato-Black";

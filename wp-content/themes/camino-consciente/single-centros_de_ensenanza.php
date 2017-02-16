@@ -69,7 +69,7 @@ $postId = 0;
                                         <?php if ( $venue_data['website'] ) : ?>
                                         <a href="<?= $venue_data['website']; ?>" target="_blank">
                                             <div class="the-bullet website">
-                                                <span class="icon-cont"><i></i></span> <p><?= $venue_data['website']; ?></p>
+                                                <span class="icon-cont"><i></i></span> <p>Ir a página web</p>
                                             </div>
                                         </a>
                                         <?php endif; ?>
