@@ -828,6 +828,14 @@ $(document).ready(function(){
 		        'json'
 		    );
 		}
+
+
+		/*----------------------------
+		ADJUST MENU SIZE ON SCROLL
+		----------------------------*/
+		//if( top > 200 ){
+		$('#main-header.header-movil').toggleClass('contracted', (top > 200));
+		//}
 	});
 });
 

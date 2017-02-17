@@ -99,14 +99,25 @@ $categorySlug = ($theCategory) ? $theCategory[0]->slug : '';
         </div>
     </div>    
 </header>
-<div cla></div>  
+
+<div ></div>
+
 <header id="main-header" class="header header-movil">
     <a href="#" id="burger-icon">
         <i class="ion-navicon-round" aria-hidden="true"></i>
     </a>
     <nav id="main-menu" class="menu">
         <ul>
-            <li class="top-logo"><div class="top-logo-wrap"><a class="to-section" href="<?= get_site_url(); ?>" title="Home"><img src="<?= THEME_DIR ?>/img/camino-conciente-logo.png" alt="Camino Consciente"></a></div></li>
+            <li class="top-logo">
+                <div class="top-logo-wrap">
+                    <a class="to-section" href="<?= get_site_url(); ?>" title="Home">
+                        <img class="big" src="<?= THEME_DIR ?>/img/camino-conciente-logo.png" alt="Camino Consciente">
+                        
+                        <img class="small" src="<?= THEME_DIR ?>/img/logo-camino-conciente_small.png" alt="Camino Consciente">
+                    </a>
+                </div>
+            </li>
+
             <?php /*<li><a class="to-section" href="tienda.html" title="Tienda">Tienda</a></li> */ ?>
             <li class="menu-sections">
                 <a class="<?php if( is_category() ) echo 'to-section category-disabled'; else echo 'to-section'; ?> js-submenu-holder" href="<?= get_site_url() ?>/cursos-y-sesiones-personales/" title="Cursos y Sesiones Personales">Instructores y Cursos</a>

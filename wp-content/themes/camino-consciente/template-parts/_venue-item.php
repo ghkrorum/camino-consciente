@@ -18,12 +18,35 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                     <h2 class="result-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 </figure>
             </a>
+
+            <?php
+            if ( $videoUrl ) :
+            ?>
+            <div class="btn-vid-cont">
+                <a href="<?= $videoUrl; ?>" data-lity>
+                    <div class="icon-video btn-video">
+                        <span class="icon-cont">
+                        <i class="icon icon-play"></i>
+                        </span>
+                        <span class="title-video">Ver video</span>
+                    </div>
+                </a>
+            </div>
+            <?php 
+            endif; 
+            ?>
         </div>
         <aside class="col-md-7">
             <div class="the-row">
+                
+                <div class="col-md-6 shares">
+                    <div class="partial-section">
+                        <?php get_template_part( 'template-parts/share' ); ?>
+                    </div>
+                </div>
+
 
                 <div class="col-md-6 course-cats">
-
                 <?php
                 $post_tags = get_the_tags();
                 if ( $post_tags ) :
@@ -41,26 +64,16 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                         <a href="<?= esc_url( $tagUrl ); ?>"><?= $tag->name; ?></a>&nbsp;
                     <?php endfor; ?>
                 <?php endif; ?>
-
-                </div>
-                
-                <div class="col-md-6 shares">
-                    <div class="partial-section">
-                        <?php get_template_part( 'template-parts/share' ); ?>
-                    </div>
                 </div>
             </div>
+
             <h2 class="result-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <?php if ( $vdata['specialty'] ) : ?>
             <h3 class="lecturer-position"><?= $vdata['specialty']; ?></h3>
             <?php endif; ?>
+
             <div class="the-row row-desc">
-                <div class="col-md-8">
-                    <div class="author-description col-md-12">
-                        <?php the_excerpt(); ?>
-                    </div>
-                </div>
-                <div class="details col-md-4">
+                <div class="details col-md-4 features">
                     <div class="the-row">
                         <div class="col-md-12">
                             <?php if ( $vdata['email'] ): ?>
@@ -110,14 +123,17 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                         <?php endif; ?>
                     </div>
                 </div>
-            </div>
-            <div class="the-row">
+
+
                 <div class="col-md-8">
-                    <div class="the-row text-center">
-                        <a href="<?php the_permalink(); ?>" class="the-btn">Ver más</a>
+                    <div class="author-description col-md-12">
+                        <?php the_excerpt(); ?>
                     </div>
                 </div>
-                <div class="col-md-4">
+            </div>
+
+            <div class="the-row">
+                <div class="col-md-4 rating_holder">
                     <div class="the-row">
                         
                         <div class="favs-container">
@@ -130,6 +146,12 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                             Experiencias de alumnos
                         </a>
                         <?php endif; ?>
+                    </div>
+                </div>
+
+                <div class="col-md-8 btn_more">
+                    <div class="the-row text-center">
+                        <a href="<?php the_permalink(); ?>" class="the-btn">Ver más</a>
                     </div>
                 </div>
             </div>
