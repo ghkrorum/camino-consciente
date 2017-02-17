@@ -24,11 +24,28 @@ $instructor = $course_data['instructor'];
                     <div class="sr-only"><img src="<?= $thumb_url ?>" alt=""></div>
                     <div class="white-gradient"></div>
                     <h2 class="result-title"><a href="<?php the_permalink(); ?>"><?= $courseTitle; ?></a></h2>
+
+                    
+
+                    <?php if ( $course_data['video']['url'] ) : ?>
+                    <div class="btn-vid-cont text-center">
+                        <a class="btn-video" href="<?= $course_data['video']['url']; ?>" data-lity>
+                            <span class="icon-cont"><i class="icon icon-play"></i></span><span>Ver video</span>
+                        </a>
+                    </div>
+                    <?php endif; ?>
                 </figure>
             </a>
         </div>
         <aside class="col-md-7">
             <div class="the-row">
+                
+                <div class="col-md-6 shares">
+                    <div class="partial-section">
+                        <?php get_template_part( 'template-parts/share' ); ?>
+                    </div>
+                </div>
+
 
                 <div class="col-md-6 course-cats">
 
@@ -51,12 +68,6 @@ $instructor = $course_data['instructor'];
                 <?php endif; ?>
 
                 </div>
-                
-                <div class="col-md-6 shares">
-                    <div class="partial-section">
-                        <?php get_template_part( 'template-parts/share' ); ?>
-                    </div>
-                </div>
             </div>
             <h2 class="result-title"><a href="<?php the_permalink(); ?>"><?= $courseTitle; ?></a></h2>
             <div class="author-description col-md-12">
@@ -64,11 +75,9 @@ $instructor = $course_data['instructor'];
                 <h3><?= $course_data['author']; ?></h3>
                 <?php endif; ?>
             </div>
+
             <div class="the-row row-desc">
-                <div class="col-md-7">
-                    <p><?= get_field( 'course_excerpt' );?> </p>
-                </div>
-                <div class="col-md-5">
+                <div class="col-md-5 features">
                     
                     <div class="the-bullet">
                         <span class="icon-cont"><i class="icon icon-calendar"></i></span> <p>Inicia <?= get_course_starting_date( $course_data['starting_date'] );?></p>
@@ -102,14 +111,14 @@ $instructor = $course_data['instructor'];
                     ?>
                     
                 </div>
-            </div>
-            <div class="the-row">
-                <div class="col-md-7">
-                    <div class="btn-cont text-center">
-                        <a href="<?php the_permalink(); ?>" class="the-btn">Ver más</a>
-                    </div>
+
+                <div class="col-md-7 excerpt">
+                    <p><?= get_field( 'course_excerpt' );?> </p>
                 </div>
-                <div class="col-md-5">
+            </div>
+
+            <div class="the-row">
+                <div class="col-md-5 rating_holder">
                     <div class="the-rating">
                         <?php
                         if(function_exists('the_ratings')) { the_ratings(); } 
@@ -121,7 +130,15 @@ $instructor = $course_data['instructor'];
                         <?php endif; ?>
                     </div>
                 </div>
+
+                <div class="col-md-7 btn_more">
+                    <div class="btn-cont text-center">
+                        <a href="<?php the_permalink(); ?>" class="the-btn">Ver más</a>
+                    </div>
+                </div>
             </div>
+
+
             <div class="details col-md-12">
                 <div class="favs-container">
                     
@@ -147,6 +164,7 @@ $instructor = $course_data['instructor'];
                 <figure class="text-center search-results-course-desktop-image" style="background-image:url('<?= $thumb_url ?>')">
                     <div class="title course-type-<?= $courseType; ?>"><?= get_course_type_name( $courseType ) ?></div>
                     <div class="sr-only"><img src="<?= $thumb_url ?>" alt=""></div>
+
                     <?php if ( $course_data['video']['url'] ) : ?>
                     <div class="btn-vid-cont text-center">
                         <a class="btn-video" href="<?= $course_data['video']['url']; ?>" data-lity>
@@ -154,6 +172,7 @@ $instructor = $course_data['instructor'];
                         </a>
                     </div>
                     <?php endif; ?>
+
                 </figure>
             </a>
         </div>

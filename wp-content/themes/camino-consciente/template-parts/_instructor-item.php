@@ -16,9 +16,23 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                     <h2 class="result-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 </figure>
             </a>
+            
+            <?php if ( $instructorData['video']['video_url'] ) : ?>
+            <div class="btn-vid-cont text-center">
+                <a class="btn-video" href="<?= $instructorData['video']['video_url']; ?>" data-lity>
+                    <span class="icon-cont"><i class="icon icon-play"></i></span><span>Ver biografía</span>
+                </a>
+            </div>
+            <?php endif; ?>
         </div>
         <aside class="col-md-7">
             <div class="the-row">
+                
+                <div class="col-md-6 shares">
+                    <div class="partial-section">
+                        <?php get_template_part( 'template-parts/share' ); ?>
+                    </div>
+                </div>
 
                 <div class="col-md-6 course-cats">
 
@@ -41,25 +55,14 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                 <?php endif; ?>
 
                 </div>
-                
-                <div class="col-md-6 shares">
-                    <div class="partial-section">
-                        <?php get_template_part( 'template-parts/share' ); ?>
-                    </div>
-                </div>
             </div>
             <h2 class="result-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <?php if ( $instructorData['profession'] ) : ?>
             <h3 class="lecturer-position"><?= $instructorData['profession']; ?></h3>
             <?php endif; ?>
             <div class="the-row row-desc">
-                <div class="col-md-8">
-                    <div class="author-description col-md-12 col-lg-12">
-                        <?php the_excerpt(); ?>
-                    </div>
-                </div>
                 
-                <div class="details col-md-4 col-lg-4 ">
+                <div class="details col-md-5 features">
                     <div class="the-row">
                         <div class="col-md-12">
                             <?php if ( $instructorData['email1'] ) : ?>
@@ -101,14 +104,14 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                         <?php endif; ?>
                     </div>
                 </div>
+
+
+                <div class="col-md-7 excerpt">
+                    <?php the_excerpt(); ?>
+                </div>
             </div>
             <div class="the-row">
-                <div class="col-md-8">
-                    <div class="the-row text-center">
-                        <a href="<?php the_permalink(); ?>" class="the-btn">Ver más</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
+                <div class="col-md-4 rating_holder">
                     <div class="the-row">
                         
                         <div class="favs-container">
@@ -121,6 +124,12 @@ $thumb_url = ( $thumb_url !== '' ) ? $thumb_url  : $default_url;
                             Experiencias de alumnos
                         </a>
                         <?php endif; ?>
+                    </div>
+                </div>
+
+                <div class="col-md-8 btn_more">
+                    <div class="the-row text-center">
+                        <a href="<?php the_permalink(); ?>" class="the-btn">Ver más</a>
                     </div>
                 </div>
             </div>
