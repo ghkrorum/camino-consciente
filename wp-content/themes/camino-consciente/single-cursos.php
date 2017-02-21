@@ -258,14 +258,14 @@
                                                 ?>
                                                 <div class="btn-vid-cont text-center">
                                                     <a class="btn-video" href="<?= $instructorVideo; ?>" data-lity="">
-                                                        <span class="icon-cont"><i class="icon icon-play"></i></span><span>Ver video</span>
+                                                        <span class="icon-cont"><i class="icon icon-play"></i></span><span>Ver biograf&iacute;a</span>
                                                     </a>
                                                 </div>
                                                 <?php endif; ?>
                                             </figure>
                                         </a>
                                         <div class="title-container">
-                                            <h1><?= sprintf('%s %s', $course_data[0]['instructor']['name'], $course_data[0]['instructor']['last_name']); ?></h1>
+                                            <h1><a href="<?php the_permalink();?>"><?= sprintf('%s %s', $course_data[0]['instructor']['name'], $course_data[0]['instructor']['last_name']); ?></a></h1>
                                             <h3><?= $course_data[0]['instructor']['profession'] ?></h3>
                                         </div>
                                     </div>
