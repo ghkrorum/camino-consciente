@@ -10090,9 +10090,11 @@ h3.lecturer-position{
   .section#home-section .carousel#home-carousel h1 { font-size: 34px; }
   .section#home-section .carousel#home-carousel p { font-size: 16px; }
   .featured-courses .course .details { height: auto; }
-  .more-articles .article { height: 540px; }
-  .more-articles .article .details { bottom: 14px; }
+  .more-articles .article { height: auto; margin-top: 5px; overflow:  auto; zoom:  1; }
+  .more-articles .article aside{ height: auto; }
+  .more-articles .article .details { bottom: 14px; height: auto; }
   .more-articles .article .details p { font-size: 15px; }
+  .more-articles .article .details h3 { height:  auto; }
   .know-services { overflow: hidden; }
   .featured-courses .course .details .date { position: relative;  bottom: 0; }
   .section#cursos-y-sesiones-personales-section .row.header .filter {
@@ -11416,6 +11418,35 @@ header#main-header.header.header-movil{
 
 
   /*-------------- RESULT ITEMS --------------*/
+  .featured-courses{
+  }
+  .featured-courses .course{
+    padding: 0; 
+    height: auto;
+  }
+  .featured-courses .course:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .featured-courses .course aside{
+    padding: 0; 
+  }
+  .featured-courses .course .details{
+    padding:  1.25em 1em;
+  }
+  .featured-courses .course a:hover figure .description {
+      display: table-cell;
+      vertical-align: middle;}
+  .featured-courses .course figure .description p{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);}
+
+
   .section#filtros-curso .articles-container .article .the-row.row-desc .features{
     float:  none;
   }
