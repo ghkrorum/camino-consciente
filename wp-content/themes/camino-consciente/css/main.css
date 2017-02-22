@@ -10138,7 +10138,7 @@ h3.lecturer-position{
   .featured-courses.main-courses{
     display: none;
   }
-  #curso-section .banner-top h1, #interior-curso-section .banner-top h1 { font-size: 2.5em; }
+  #curso-section .banner-top h1, #interior-curso-section .banner-top h1 { font-size: 2.12em; }
   .blog-nota-des { font-size: 13px; }
   #curso-section .wrapper-nota-blog, #interior-curso-section .wrapper-nota-blog { bottom: -18%; }
   #curso-section .banner-top, #interior-curso-section .banner-top { margin-bottom: 80px; }
@@ -11136,7 +11136,7 @@ h3.lecturer-position{
     display: none;
   }
   .section#filtros-curso .articles-container .article .the-row{
-    margin:  0 auto;
+    margin:  0 auto ;
   }
   .section#filtros-curso .articles-container .article .the-row.row-desc > div{
     padding: 0;
@@ -11195,7 +11195,7 @@ h3.lecturer-position{
   #curso-section .banner-top h1,
   #interior-curso-section .banner-top h1{
     margin:  0 auto;
-    padding:  1.5em 1em 0;
+    padding:  2em 1em 0;
   }
   #curso-section .nota-blog-head .banner-top .title-cont{
     top: 0;
