@@ -9983,6 +9983,7 @@ h3.lecturer-position{
   bottom: auto;
   top: 25px;
   right: 40px;
+  left: auto;
 }
 #instructor-section .btn-video span.icon-cont,
 #centros-de-ensenanza-interior-section .btn-video span.icon-cont{
@@ -11177,6 +11178,47 @@ h3.lecturer-position{
 
 
 
+  
+
+  /*-------------- INTERIOR INSTRUCTORES  --------------*/
+  #instructor-section .btn-vid-cont,
+  #centros-de-ensenanza-interior-section .btn-vid-cont{
+    left: 5% !important; right: auto !important;
+  }
+  #instructor-section .top-article figure .title-container,
+  #centros-de-ensenanza-interior-section .top-article figure .title-container{
+    padding: 1.5em 2%;
+  }
+  #instructor-section .instructor-contact,
+  #centros-de-ensenanza-interior-section .instructor-contact{
+    overflow: auto; zoom:  1;
+    margin-top: 10px;
+  }
+
+  #instructor-section .instructor-contact .the-bullet.location,
+  #instructor-section .instructor-contact .the-bullet.website,
+  #centros-de-ensenanza-interior-section .instructor-contact .the-bullet.location,
+  #centros-de-ensenanza-interior-section .instructor-contact .the-bullet.website{
+    clear: both;
+    min-width: 165px;
+    margin-left: auto; margin-right: auto;
+  }
+  #instructor-section .instructor-contact .the-bullet,
+  #centros-de-ensenanza-interior-section .instructor-contact .the-bullet{
+    margin-bottom: 5px;
+  }
+
+  #instructor-section .post-ratings h4,
+  #centros-de-ensenanza-interior-section .post-ratings h4{
+    text-align: left;
+    float: none;
+    clear: both;
+    margin-top: 1em;
+  }
+
+
+
+
 
   /*-------------- INTERIOR CURSOS  --------------*/
   #curso-section .nota-blog-head .banner-top{
@@ -11492,6 +11534,21 @@ header#main-header.header.header-movil{
 
   .section#filtros-curso .articles-container .article .compartir{
     margin-top: 0;
+  }
+
+
+
+
+
+  /*-------------- INTERIOR INSTRUCTORES  --------------*/
+  #instructor-section .btn-vid-cont,
+  #centros-de-ensenanza-interior-section .btn-vid-cont{
+    right: auto;
+    left:  40px;
+  }
+  #instructor-section .top-article figure .title-container,
+  #centros-de-ensenanza-interior-section .top-article figure .title-container{
+    padding: 1.5em 2%;
   }
 
 
