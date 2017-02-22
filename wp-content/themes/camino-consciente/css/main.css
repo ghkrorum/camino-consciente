@@ -10186,7 +10186,7 @@ h3.lecturer-position{
     margin-top: 10px;
     display: inline-block;
   }
-  #curso-section .banner-top .precio.mxn, #interior-curso-section .banner-top .precio { font-size: 1.5em; }
+  #curso-section .banner-top .precio.mxn, #interior-curso-section .banner-top .precio { /*font-size: 1.5em;*/ }
   #curso-section .tab-wrapper ul li a, #interior-curso-section .tab-wrapper ul li a { font-size: 13px; font-weight: bold; }
   .nav > li > a { padding: 10px 5px; }
   #curso-section .tab-wrapper ul li a, #interior-curso-section .tab-wrapper ul li a { width: 92%; }
@@ -11116,6 +11116,11 @@ h3.lecturer-position{
 * 
 -------------------------------------------------------------*/
 
+@media screen and (min-width: 768px) {
+  #curso-section .wrapper-nota-blog-mobile-top{
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .section#filtros-curso .articles-container .article .search-results-mobile-image{
 
@@ -11200,8 +11205,19 @@ h3.lecturer-position{
     margin:  auto;
     text-align: center
   }
+  #curso-section .banner-top .partial-section.desktop{
+    display: none;
+  }
   #curso-section .banner-top .partial-section .compartir{
     margin-top: 0;
+  }
+  #curso-section .banner-top .wrapper-nota-blog-mobile-top{
+    position: absolute;
+    bottom:  1em;
+  }
+  #curso-section .banner-top .wrapper-nota-blog-mobile-top .partial-section{
+    position: relative;
+    bottom:  auto;
   }
 
   #curso-section ul.course-targets{
@@ -11340,6 +11356,8 @@ header#main-header.header.header-movil{
 
 
 
+
+
 @media screen and (max-width: 992px) {
 
   /*-------------- HEADER --------------*/
@@ -11414,7 +11432,6 @@ header#main-header.header.header-movil{
     margin-top: 0;
   }
   
-
 
 
   /*-------------- RESULT ITEMS --------------*/

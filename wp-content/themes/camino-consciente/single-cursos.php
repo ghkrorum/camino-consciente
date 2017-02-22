@@ -118,9 +118,35 @@
                             <?php if ($subscribeUrl) : ?>
                             <a href="<?= $subscribeUrl; ?>" target="_blank" <?= $aData; ?>><span class="title"><?= $btnLabel; ?></span></a>
                             <?php endif; ?>
+                        </div>
+
+                        <div class="wrapper-nota-blog wrapper-nota-blog-mobile-top button-header">
+                            
+                            <?= $priceTag; ?>
+                            
+                            <p class="precio mxn local-price"></p>
+                            
+                            <?php if ($subscribeUrl) : ?>
+                            <a href="<?= $subscribeUrl; ?>" target="_blank" <?= $aData; ?>><span class="title"><?= $btnLabel; ?></span></a>
+                            <?php endif; ?>
+
+                            <div class="partial-section">
+                                <?php get_template_part( 'template-parts/share' ); ?>
+                            </div>
+
+                            <?php if ($videoUrl): ?>
+                            <div class="btn-vid-cont text-center">
+                                <a class="btn-video" href="<?= $videoUrl; ?>" data-lity>
+                                    <span class="icon-cont"><i class="icon icon-play"></i></span><span>Ver video</span>
+                                </a>
+                            </div>
+                            <?php endif; ?>
                             
                         </div>
-                        <div class="partial-section">
+
+
+
+                        <div class="partial-section desktop">
                             <?php get_template_part( 'template-parts/share' ); ?>
                         </div>
                     </div>
